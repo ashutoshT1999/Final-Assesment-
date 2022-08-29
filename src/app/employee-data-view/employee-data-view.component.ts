@@ -16,7 +16,8 @@ export class EmployeeDataViewComponent implements OnInit {
   ngOnInit(): void {
     // this._data.getdata().subscribe((data) => this.productdata = data.filter(x => x.productCode == this._route.snapshot.paramMap.get('id')));
     this._data.getdatabyApi().subscribe((data) => {
-      this.tabledata = data.filter(x => x.code = this._route.snapshot.paramMap.get('id'))
+      this.tabledata = data.filter(x => x.code == this._route.snapshot.paramMap.get('id'));
+      console.log(this.tabledata);
     })
   }
   displayedColumns: string[] = ['fullname','email','contactnumber','pincode','gender','employeetype'];
