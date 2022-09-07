@@ -9,7 +9,7 @@ export class personformdeactivate implements CanDeactivate<EmployeeFormComponent
 
 
     canDeactivate(component:EmployeeFormComponent):boolean{
-      if(component.employeedataformfields!.dirty){
+      if(component.employeedataformfields.dirty){
         return confirm("Are you sure you want to discard the changes ?");
       }
       else return true;

@@ -11,15 +11,13 @@ import { personformdeactivate } from '../employee-service/employee-data-service'
   providers:[personformdeactivate]
 })
 export class EmployeeFormComponent implements OnInit {
-
-  @ViewChild('employeedataformfields') personform!: NgForm;
   
   constructor(private _fb:FormBuilder) { }
 
   ngOnInit(): void {
-
+    
   }
-
+  
   employeedataformfields = this._fb.group({
     firstname:['',[Validators.required]],
     middlename:[''],
