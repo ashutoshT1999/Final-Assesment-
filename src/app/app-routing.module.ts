@@ -1,13 +1,10 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { EmployeeDataTableComponent } from './employee-data-table/employee-data-table.component';
-import { EmployeeDataViewComponent } from './employee-data-view/employee-data-view.component';
 import { EmployeeFormComponent } from './employee-form/employee-form.component';
+import { personformdeactivate } from './employee-service/employee-data-service';
 
 const routes: Routes = [
-  {path:'',component:EmployeeFormComponent},
-  {path:'table',component:EmployeeDataTableComponent},
-  { path:'view/:id',component:EmployeeDataViewComponent}
+  {path:'',component:EmployeeFormComponent, canDeactivate:[personformdeactivate]},
   
 ];
 

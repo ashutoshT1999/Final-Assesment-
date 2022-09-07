@@ -1,15 +1,19 @@
-import { Component, OnInit } from '@angular/core';
-import { FormBuilder, Validators } from '@angular/forms';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { FormBuilder, NgForm, Validators } from '@angular/forms';
 import { contactvalidate } from '../employee-form-validator/contactnumber';
 import { pincodevalidate } from '../employee-form-validator/pincode';
+import { personformdeactivate } from '../employee-service/employee-data-service';
 
 @Component({
   selector: 'app-employee-form',
   templateUrl: './employee-form.component.html',
-  styleUrls: ['./employee-form.component.css']
+  styleUrls: ['./employee-form.component.css'],
+  providers:[personformdeactivate]
 })
 export class EmployeeFormComponent implements OnInit {
 
+  @ViewChild('employeedataformfields') personform!: NgForm;
+  
   constructor(private _fb:FormBuilder) { }
 
   ngOnInit(): void {

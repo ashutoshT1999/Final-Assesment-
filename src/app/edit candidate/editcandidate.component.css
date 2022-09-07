@@ -1,0 +1,15 @@
+input{
+    max-width: 100%;
+}
+/* html,
+body {
+  height: 100%
+} */
+mat-form-field{
+    width: 235px;
+}
+button:hover{
+
+    box-shadow: 2px 2px 2px 2px rgba(41, 34, 144, 0.786);
+
+}
